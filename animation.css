@@ -1,0 +1,79 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+.animation-heading{
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color:gray;
+    font-weight: 800;
+    animation-name: heading;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heading{
+    100%{transform : scale(1.5,1.5)}
+}
+
+.animation-heading:hover{
+    animation-play-state: paused;
+}
+
+.animation-outer-circle{
+    /* text-align: center; */
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    margin: auto;
+    /* margin-top: 80px; */
+    border-radius: 50%;
+    animation-name: circle-rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circle-rotation{
+    100%{transform: rotate(360deg)}
+}
+
+.animation-outer-circle:hover{
+    animation-play-state: paused;
+}
+
+.animation-inner-circle{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.animation-bouncing{
+    width: 600px;
+    height: 400px;
+    background-color: blue;
+
+}
+.ball{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    animation-name:bouncing-ball;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bouncing-ball{
+    25%{transform: translate(8px,360px);}
+    50%{transform: translate(208px,0px);}
+    75%{transform: translate(408px,360px);}
+    100%{transform: translate(560px,0px);}
+}
